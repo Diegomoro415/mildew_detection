@@ -7,14 +7,15 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 def page_ml_performance_dashboard():
     version = 'v1'
-
+    st.write("## ML Performance Metrics")
+    st.write("---")
     st.info(
         f"This dashboard provides a user-friendly presentation of how the"
         f" dataset was divided and how the model performed on that data."
     )
 
     # Section: Images Distribution
-    st.write("## Images Distribution per Set and Label")
+    st.write("### Images Distribution per Set and Label")
 
     st.warning(
         f"The leaves dataset was divided into three subsets:\n\n"
@@ -36,7 +37,7 @@ def page_ml_performance_dashboard():
     st.write("---")
 
     # Section: Model Performance
-    st.write("## Model Performance")
+    st.write("### Model Performance")
 
     # Classification Report
     st.warning(
@@ -87,7 +88,7 @@ def page_ml_performance_dashboard():
     st.write("---")
 
     # Section: Generalized Performance on Test Set
-    st.write("## Generalized Performance on Test Set")
+    st.write("### Generalized Performance on Test Set")
 
     test_evaluation_df = pd.DataFrame(
         load_test_evaluation(version), index=['Loss', 'Accuracy'])

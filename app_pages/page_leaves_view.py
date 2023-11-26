@@ -10,40 +10,48 @@ import random
 
 
 def page_leaves_view_body():
-    st.write("# Data Visualizer")
+    st.write("## Leaves View")
+    st.write("---")
+
     st.info(
-        "Data Visualizer, where we delve into the intricate details"
-        " of cherry leaves."
-        " Our study focuses on visually differentiating leaves affected"
-        " by powdery mildew from healthy ones."
+        f"**Data Visualizer** \n\n We delve into the intricate details"
+        f" of cherry leaves."
+        f" Our study focuses on visually differentiating leaves affected"
+        f" by powdery mildew from healthy ones."
     )
 
-    st.write("## Study Overview")
+    st.write("---")
+
     st.success(
-        "In this research, our primary objective is to pinpoint visual"
-        " indicators of powdery mildew infection on cherry leaves. Early signs"
-        " often manifest as circular lesions with a subtle green tint,"
-        " eventually giving rise to a delicate, cottony appearance"
-        " manifests in the infected regions.\n\n"
+        f"**Study Overview** \n\n In this research, our primary objective is"
+        f" to pinpoint visual indicators of powdery mildew infection on"
+        f" cherry leaves. Early signs often manifest as circular"
+        f" lesions with a subtle green tint, eventually giving rise to"
+        f" a delicate, cottony appearance manifests in the"
+        f" infected regions.\n\n"
 
-        "Transforming these visual traits into the language of machine"
-        " learning necessitates meticulous image preparation before initiating"
-        " model training. This preparatory step is crucial for optimal"
-        " feature extraction and effective training.\n\n"
+        f"Transforming these visual traits into the language of machine"
+        f" learning necessitates meticulous image preparation before"
+        f" initiating model training. This preparatory step is crucial"
+        f" for optimal feature extraction and effective training.\n\n"
 
-        "When handling an image dataset, the imperative lies in the"
-        " normalization of images before the Neural Network training process."
-        " Normalization entails determining the mean and standard deviation"
-        " across the entire dataset, employing a mathematical algorithm"
-        " tailored to the inherent qualities of each image.\n\n"
+        f"When handling an image dataset, the imperative lies in the"
+        f" normalization of images before the Neural Network training process."
+        f" Normalization entails determining the mean and standard deviation"
+        f" across the entire dataset, employing a mathematical algorithm"
+        f" tailored to the inherent qualities of each image.\n\n"
 
-        "This normalization process significantly enhances the model's"
-        " capacity to comprehend and generalize from the dataset,"
-        " thereby elevating overall performance."
+        f"This normalization process significantly enhances the model's"
+        f" capacity to comprehend and generalize from the dataset,"
+        f" thereby elevating overall performance."
     )
 
-    st.write("For additional details and guidelines, please refer to the Project "
-             "[Project README](https://github.com/Diegomoro415/mildew_detection/tree/main)")
+    st.write(
+        f"For additional details and guidelines, please refer to the Project "
+        f"[Project README]"
+        f"(https://github.com/Diegomoro415/mildew_detection/tree/main)")
+
+    st.write("---")
 
     # Using expanders for each section
     with st.beta_expander("Difference between average and variability image"):
@@ -53,10 +61,10 @@ def page_leaves_view_body():
             f"outputs/{version}/avg_var_powdery_mildew.png")
 
         st.warning(
-            "Note that the average and variability images did not show distinct"
-            " patterns. "
-            "However, a slight difference in color pigment is observed in the"
-            " average images for both classes."
+            f"Note that the average and variability images did not show"
+            f" distinct patterns. "
+            f"However, a slight difference in color pigment is observed in the"
+            f" average images for both classes."
         )
 
         st.image(avg_var_healthy,
@@ -70,8 +78,8 @@ def page_leaves_view_body():
         avg_diff = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.warning(
-            "Note that this study didn't show distinct patterns where we"
-            " could intuitively differentiate one from another."
+            f"Note that this study didn't show distinct patterns where we"
+            f" could intuitively differentiate one from another."
         )
         st.image(avg_diff, caption='Difference between average images')
 
@@ -102,7 +110,8 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
             img_idx = random.sample(images_list, nrows * ncols)
         else:
             st.warning(
-                f"Decrease the number of rows (nrows) or columns (ncols) to create your montage. \n"
+                f"Decrease the number of rows (nrows) or columns (ncols)"
+                f" to create your montage. \n"
                 f"There are {len(images_list)} images in the class. "
                 f"You requested a montage with {nrows * ncols} spaces"
             )

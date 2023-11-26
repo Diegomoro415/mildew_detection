@@ -15,7 +15,7 @@ from src.machine_learning.predictive_analysis import (
 def page_mildew_detector_body():
     st.write("---")
     st.info(
-        "Welcome to the Powdery Mildew Detector! This tool is designed to help"
+        "**Powdery Mildew Detector** \n\n This tool is designed to help"
         " you identify whether a cherry leaf is affected"
         " by powdery mildew or not."
     )

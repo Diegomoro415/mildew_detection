@@ -3,7 +3,8 @@ import streamlit as st
 
 def page_summary_body():
 
-    st.write("### Project Summary")
+    st.write("## Project Summary")
+    st.write("---")
 
     st.info(
         f"**General Information**\n"
@@ -36,7 +37,7 @@ def page_summary_body():
         f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)")
 
     st.success(
-        f"The project has 2 business requirements:\n"
+        f"**The project has 2 business requirements:**\n"
         f"* 1 - The client is interested in conducting a study to visually "
         f"differentiate a healthy cherry leaf from one with powdery mildew.\n"
         f"* 2 - The client is interested in predicting if a cherry leaf is "
