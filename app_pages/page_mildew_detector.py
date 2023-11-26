@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import pandas as pd
+import time
 
 from src.data_management import download_dataframe_as_csv
 from src.machine_learning.predictive_analysis import (
@@ -12,6 +13,7 @@ from src.machine_learning.predictive_analysis import (
 
 
 def page_mildew_detector_body():
+    st.write("---")
     st.info(
         "Welcome to the Powdery Mildew Detector! This tool is designed to help"
         " you identify whether a cherry leaf is affected"
@@ -35,6 +37,7 @@ def page_mildew_detector_body():
 
     if images_buffer is not None:
         df_report = pd.DataFrame([])
+        start_time = time.time()  # Registre o tempo inicial
         for image in images_buffer:
             img_pil = Image.open(image)
             st.info(f"Cherry Leaf Sample: **{image.name}**")
@@ -56,8 +59,13 @@ def page_mildew_detector_body():
                 {"Name": image.name, "Result": pred_class}, ignore_index=True
             )
 
+        end_time = time.time()  # Registre o tempo final
+        elapsed_time = end_time - start_time  # Calcule o tempo decorrido
+
         if not df_report.empty:
             st.success("Analysis Report")
             st.table(df_report)
             st.markdown(download_dataframe_as_csv(
                 df_report), unsafe_allow_html=True)
+
+            st.info(f"Elapsed Time for Analysis: {elapsed_time:.2f} seconds")
