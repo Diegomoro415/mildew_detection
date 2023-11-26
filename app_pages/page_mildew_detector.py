@@ -15,16 +15,16 @@ from src.machine_learning.predictive_analysis import (
 def page_mildew_detector_body():
     st.write("---")
     st.info(
-        "**Powdery Mildew Detector** \n\n This tool is designed to help"
-        " you identify whether a cherry leaf is affected"
-        " by powdery mildew or not."
+        f"**Powdery Mildew Detector** \n\n This tool is designed to help"
+        f" you identify whether a cherry leaf is affected"
+        f" by powdery mildew or not."
     )
 
     st.write(
-        "To perform a live prediction, you can upload images of cherry leaves."
-        " For your convenience, you can download a sample dataset containing"
-        " images of both healthy and infected leaves from"
-        " [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
+        f"To perform a live prediction, you can upload images of cherry leaves."
+        f" For your convenience, you can download a sample dataset containing"
+        f" images of both healthy and infected leaves from"
+        f" [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
     )
 
     st.write("---")
