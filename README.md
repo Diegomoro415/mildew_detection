@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD051 -->
 # 🌱 Cherry Leaf Mildew Detection
 
 ## Table of Contents
@@ -8,6 +10,10 @@
   - [Brief Introduction](#brief-introduction)
   - [Dataset Content](#dataset-content)
   - [Business Requeriment](#business-requeriment)
+  - [Hypothesis and Validations](#hypothesis-and-validations)
+    - [Hypotheis 1](#hypothesis-1)
+  - [Hypothesis 2](#hypothesis-2)
+    - [Hypothesis 3](#hypothesis-3)
 
 ---
 
@@ -69,3 +75,112 @@ healthy cherry leaf from one with powdery mildew.
 contains powdery mildew.
 
 ---
+
+## Hypothesis and Validations
+
+Hypothesis and Validation 1
+
+- **Visual Differentiation:** We hypothesize that cherry leaves infected with
+   powdery mildew exhibit distinctive visual patterns or marks that
+   differentiate them from healthy leaves. This can include specific
+    discolorations, lesions, or other identifiable features.
+
+- **Validation:** To validate this hypothesis, we will conduct an
+    in-depth analysis of the image data, exploring average images,
+    variability images, and differences between averages. If clear patterns
+    emerge, it supports the hypothesis.
+
+Hypothesis and Validation 2
+
+- **Model Prediction:** We hypothesize that a machine learning model,
+  trained on a dataset of cherry leaf images, can accurately predict whether
+  a leaf is healthy or infected with powdery mildew based on visual
+  features extracted from the images.
+
+- **Validation:** To validate this hypothesis, we will evaluate the model's
+  performance metrics, including accuracy, precision, recall, and F1 score.
+  A high level of accuracy and reliable predictions will support
+  the effectiveness of the model.
+
+Hypothesis and Validation 3
+
+- **Time Efficiency:** We hypothesize that implementing the ML system for
+  instant cherry leaf analysis will significantly reduce the time spent on
+  manual inspections. The time saved will make the detection process more
+  scalable across thousands of cherry trees.
+
+- **Validation:** To validate this hypothesis, we will compare the time
+  required for manual inspections with the time taken by the ML model for
+  the same number of cherry trees. If the ML system demonstrates a substantial
+  time reduction, it supports the hypothesis.
+
+---
+
+### **Hypothesis 1**
+>
+> **Visual Differentiation:** We hypothesize that cherry leaves infected with
+powdery mildew exhibit distinctive visual patterns or marks that differentiate
+them from healthy leaves. This can include specific discolorations, lesions,
+or other identifiable features.
+
+When cherry leaves are infected with Powdery Mildew, characteristic marks
+become apparent. These may include specific discolorations, lesions, or other
+identifiable features, evolving into distinctive white powdery spots. It's
+crucial to convey this visual understanding to our system.
+
+The initial step involves the transformation, splitting, and preparation of
+our dataset for optimal learning outcomes. One key preprocessing step is
+the normalization of our images.
+
+Before we train our model, we must calculate the mean and standard deviation
+for our images. The mean, obtained by dividing the sum of pixel values by the
+total number of pixels in the dataset, helps understand the average brightness.
+Meanwhile, standard deviation indicates the variation in brightness across
+the images, aiding in distinguishing features.
+
+- **Visual Representation**
+  
+  To visually demonstrate the distinction between healthy and infected leaves,
+  we can create an image montage.
+
+   ><details><summary>Healthy Leaves</summary><img src="/readme_images/healthy_leaves.png">
+    </details>
+
+   > <details><summary>Infected Leaves</summary><img src="/readme_images/infected_leaves.png">
+   </details>
+
+    Next, examining average and variability images allows us to identify
+    patterns more clearly. In the case of infected leaves, we might observe
+    more white spots and lines.
+  
+    > <details><summary>Difference between average and variability image</summary><img src="/readme_images/avarege_image.png"></details>
+
+   However, it's crucial to note that there might be no visual differences
+   in the average images of infected and healthy leaves, as illustrated below.
+
+   > <details><summary>Differences between average healthy and average infected leaves</summary><img src="/readme_images/avarege_healthy_infected.png"></details>
+
+- **Effective Learning**
+
+    Despite potential challenges, the system demonstrates its capability to
+    detect differences in our dataset. This step is vital as it ensures that
+    our model can comprehend patterns and features, enabling accurate
+    predictions for new data with similar challenges.
+
+    This approach, grounded in visual markers and supported by robust
+    preprocessing techniques, forms the foundation for our hypothesis
+    validation. As we progress, it will be essential to assess how well
+    our model learns and generalizes from these distinctive visual cues.
+
+### **Hypothesis 2**
+
+>**Model Prediction:** We hypothesize that a machine learning model,
+  trained on a dataset of cherry leaf images, can accurately predict whether
+  a leaf is healthy or infected with powdery mildew based on visual
+  features extracted from the images.
+
+- **Training for Predictive Accuracy**
+  
+  Our hypothesis revolves around the model's predictive prowess in discerning the health status of cherry leaves. To achieve this, our machine learning model must be trained on a dataset comprising images of both healthy and infected leaves. The primary focus is on extracting visual features from these images to enable accurate predictions.
+
+    Prior to training, it's imperative to preprocess the dataset, employing techniques such as normalization for optimal learning conditions. Once equipped with the necessary features, the model can delve into the intricacies of distinguishing visual patterns associated with healthy and infected cherry leaves.

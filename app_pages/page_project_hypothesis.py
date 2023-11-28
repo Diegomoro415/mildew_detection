@@ -28,7 +28,7 @@ def page_project_hypothesis_body():
     st.write("### Hypothesis and Validation 2")
 
     st.info(
-        f"**Model Prediction Hypothesis:**\n\n ** We hypothesize that a"
+        f"**Model Prediction Hypothesis:**\n\n We hypothesize that a"
         f" machine learning model, trained on a dataset of cherry leaf images,"
         f" can accurately predict whether a leaf is healthy or infected"
         f" with powdery mildew based on visual features"
