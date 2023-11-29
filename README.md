@@ -11,9 +11,14 @@
   - [Dataset Content](#dataset-content)
   - [Business Requeriment](#business-requeriment)
   - [Hypothesis and Validations](#hypothesis-and-validations)
-    - [Hypotheis 1](#hypothesis-1)
-  - [Hypothesis 2](#hypothesis-2)
-    - [Hypothesis 3](#hypothesis-3)
+    - [**Hypothesis 1**](#hypothesis-1)
+    - [**Hypothesis 2**](#hypothesis-2)
+    - [**Distribution of Imagens per Set and Labels**](#distribution-of-imagens-per-set-and-labels)
+    - [**Classification report**](#classification-report)
+    - [**ROC Curve**](#roc-curve)
+    - [**Confusion Matrix**](#confusion-matrix)
+    - [**Model Performance Plots**](#model-performance-plots)
+    - [**Hypothesis 3**](#hypothesis-3)
 
 ---
 
@@ -181,6 +186,133 @@ the images, aiding in distinguishing features.
 
 - **Training for Predictive Accuracy**
   
-  Our hypothesis revolves around the model's predictive prowess in discerning the health status of cherry leaves. To achieve this, our machine learning model must be trained on a dataset comprising images of both healthy and infected leaves. The primary focus is on extracting visual features from these images to enable accurate predictions.
+  Our hypothesis revolves around the model's predictive prowess in discerning
+  the health status of cherry leaves. To achieve this, our machine learning
+  model must be trained on a dataset comprising images of both healthy and
+  infected leaves. The primary focus is on extracting visual features from
+  these images to enable accurate predictions.
+  
+  Prior to training, it's imperative to preprocess the dataset, employing
+  techniques such as normalization for optimal learning conditions.
+  Once equipped with the necessary features, the model can delve into the
+  intricacies of distinguishing visual patterns associated with
+  healthy and infected cherry leaves.
 
-    Prior to training, it's imperative to preprocess the dataset, employing techniques such as normalization for optimal learning conditions. Once equipped with the necessary features, the model can delve into the intricacies of distinguishing visual patterns associated with healthy and infected cherry leaves.
+- **Visual Representation**
+  In addition to numerical metrics, visualizing the model's output is essential.
+  This can be achieved by generating visualizations that showcase the model's
+  predictions on sample images. These visual outputs provide a tangible
+  representation of the model's understanding and offer insights into how well
+  it can distinguish between healthy and infected leaves.
+
+### **Distribution of Imagens per Set and Labels**
+
+><details><summary>Labels Distribution</summary><img src="/outputs/v1/labels_distribution.png">
+</details>
+
+><details><summary>Sets Distribution</summary><img src="/outputs/v1/sets_distribution.png">
+</details>
+
+The set distribution shows how the dataset was divided among training,
+validation, and test sets, while the labels distribution highlights the
+proportion of healthy and infected leaves in each set.
+
+### **Classification report**
+
+><details><summary>Classification Report</summary><img src="/outputs/v1/c_report.png">
+</details>
+
+The classification report provides detailed metrics, including *Precision,
+Recall, F1 Score*, and *Support* for each class, offering a comprehensive
+understanding of the model's performance on specific categories.
+
+### **ROC Curve**
+
+><details><summary>ROC Curve</summary><img src="/outputs/v1/roc_curve.png">
+</details>
+
+The ROC curve illustrates the model's ability to distinguish between classes,
+while the Area Under the Curve (AUC) measures the overall performance of
+the model.
+
+### **Confusion Matrix**
+
+><details><summary>Confusion Matrix</summary><img src="/outputs/v1/confusion_matrix.png">
+</details>
+
+The confusion matrix helps evaluate classifier performance, showing true
+positives/negatives and false positives/negatives.
+
+### **Model Performance Plots**
+
+><details><summary>Model Training Loss</summary><img src="/outputs/v1/model_training_loss.png">
+</details>
+
+><details><summary>Model Training Accurancy</summary><img src="/outputs/v1/model_training_losses.png">
+</details>
+
+The overall performance of the model on the test set is presented below:
+
+><summary>Generalized Performance on Test Set</summary><img src="/readme_images/g_performance.png">
+
+- **Conclusion:**
+
+    Empowering Precision Agriculture
+    The successful validation of this hypothesis not only substantiates the
+    model's predictive accuracy but also positions it as a valuable tool in the
+    realm of precision agriculture. By leveraging machine learning to swiftly
+    assess the health of cherry leaves, we contribute to the efficiency and
+    scalability of the inspection process.
+
+### **Hypothesis 3**
+
+> **Time Efficiency:** We hypothesize that implementing the ML system for
+  instant cherry leaf analysis will significantly reduce the time spent on
+  manual inspections. The time saved will make the detection process more
+  scalable across thousands of cherry trees.
+
+Implementing the ML system for instant cherry leaf analysis will significantly
+reduce the time spent on manual inspections, making the detection process more
+scalable across thousands of cherry trees.
+
+- **Introduction:**
+  
+    Addressing Time Constraints
+    Our hypothesis centers on the notion that integrating a machine learning system
+    into the cherry leaf analysis workflow will lead to substantial time savings
+    compared to manual inspections. This is particularly crucial for scalability,
+    given the vast number of cherry trees under consideration.
+
+- **Time Comparison:**
+
+    Manual vs. ML Inspection
+    To validate this hypothesis, a comparative analysis of the time required for
+    manual inspections versus the ML system's instant analysis is essential.
+    By measuring and contrasting these timeframes, we can gauge the efficiency
+    gains brought about by the integration of our machine learning solution.
+
+- **Scalability Impact:**
+
+    Enabling Large-Scale Deployment
+    Beyond time savings, the scalability impact of the ML system is a key
+    aspect of this hypothesis. Successful validation will pave the way for
+    the widespread deployment of the system across numerous cherry trees,
+    addressing the scalability challenges inherent in manual inspection
+    processes.
+
+- **Visual Representation:**
+  
+    Our system includes a time tracking feature that records the duration of each analysis. This information provides a practical demonstration of the time saved compared to manual inspections.
+
+    ><summary>Elapsed Time For Analysis</summary><img src="/readme_images/elapsed_time.png">
+
+- **Conclusion:**
+
+    A Paradigm Shift in Inspection Dynamics
+    The validation of this hypothesis heralds a paradigm shift in cherry leaf
+    inspection dynamics. The infusion of machine learning not only optimizes
+    time utilization but also positions the agricultural process for seamless
+    scalability, aligning with the evolving landscape of modern farming
+    practices.
+
+---

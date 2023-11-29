@@ -21,10 +21,10 @@ def page_mildew_detector_body():
     )
 
     st.write(
-        f"To perform a live prediction, you can upload images of cherry leaves."
-        f" For your convenience, you can download a sample dataset containing"
-        f" images of both healthy and infected leaves from"
-        f" [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
+        f"To perform a live prediction, you can upload images of cherry""
+        f" leaves. For your convenience, you can download a sample dataset"
+        f" containing images of both healthy and infected leaves from "
+        f"[here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
     )
 
     st.write("---")
@@ -68,4 +68,5 @@ def page_mildew_detector_body():
             st.markdown(download_dataframe_as_csv(
                 df_report), unsafe_allow_html=True)
 
-            st.info(f"Elapsed Time for Analysis: {elapsed_time:.2f} seconds")
+            st.warning(
+                f"Elapsed Time for Analysis: {elapsed_time:.2f} seconds")
