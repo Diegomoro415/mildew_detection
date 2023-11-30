@@ -21,7 +21,7 @@ def page_mildew_detector_body():
     )
 
     st.write(
-        f"To perform a live prediction, you can upload images of cherry""
+        f"To perform a live prediction, you can upload images of cherry"
         f" leaves. For your convenience, you can download a sample dataset"
         f" containing images of both healthy and infected leaves from "
         f"[here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."

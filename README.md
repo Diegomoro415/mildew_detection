@@ -13,12 +13,9 @@
   - [Hypothesis and Validations](#hypothesis-and-validations)
     - [**Hypothesis 1**](#hypothesis-1)
     - [**Hypothesis 2**](#hypothesis-2)
-    - [**Distribution of Imagens per Set and Labels**](#distribution-of-imagens-per-set-and-labels)
-    - [**Classification report**](#classification-report)
-    - [**ROC Curve**](#roc-curve)
-    - [**Confusion Matrix**](#confusion-matrix)
-    - [**Model Performance Plots**](#model-performance-plots)
     - [**Hypothesis 3**](#hypothesis-3)
+    - [**Rationale to Map business Requirements to Data Visualizations and ML Tasks**](#rationale-to-map-business-requirements-to-data-visualizations-and-ml-tasks)
+      - [**Mapping Business Requirements to Data Visualizations and ML Tasks**](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
 
 ---
 
@@ -205,7 +202,7 @@ the images, aiding in distinguishing features.
   representation of the model's understanding and offer insights into how well
   it can distinguish between healthy and infected leaves.
 
-### **Distribution of Imagens per Set and Labels**
+- ### **Distribution of Imagens per Set and Labels**
 
 ><details><summary>Labels Distribution</summary><img src="/outputs/v1/labels_distribution.png">
 </details>
@@ -217,7 +214,7 @@ The set distribution shows how the dataset was divided among training,
 validation, and test sets, while the labels distribution highlights the
 proportion of healthy and infected leaves in each set.
 
-### **Classification report**
+- ### **Classification report**
 
 ><details><summary>Classification Report</summary><img src="/outputs/v1/c_report.png">
 </details>
@@ -226,7 +223,7 @@ The classification report provides detailed metrics, including *Precision,
 Recall, F1 Score*, and *Support* for each class, offering a comprehensive
 understanding of the model's performance on specific categories.
 
-### **ROC Curve**
+- ### **ROC Curve**
 
 ><details><summary>ROC Curve</summary><img src="/outputs/v1/roc_curve.png">
 </details>
@@ -235,7 +232,7 @@ The ROC curve illustrates the model's ability to distinguish between classes,
 while the Area Under the Curve (AUC) measures the overall performance of
 the model.
 
-### **Confusion Matrix**
+- ### **Confusion Matrix**
 
 ><details><summary>Confusion Matrix</summary><img src="/outputs/v1/confusion_matrix.png">
 </details>
@@ -243,7 +240,7 @@ the model.
 The confusion matrix helps evaluate classifier performance, showing true
 positives/negatives and false positives/negatives.
 
-### **Model Performance Plots**
+- ### **Model Performance Plots**
 
 ><details><summary>Model Training Loss</summary><img src="/outputs/v1/model_training_loss.png">
 </details>
@@ -314,5 +311,63 @@ scalable across thousands of cherry trees.
     time utilization but also positions the agricultural process for seamless
     scalability, aligning with the evolving landscape of modern farming
     practices.
+
+---
+
+### **Rationale to Map business Requirements to Data Visualizations and ML Tasks**
+
+In alignment with the CRISP-DM methodology, our approach encompasses six key phases to ensure a systematic and effective development process:
+
+1. **Business Understanding:**
+   - Define objectives and requirements to conduct a visual differentiation study between healthy and powdery mildew-affected cherry leaves.
+   - Set clear goals to achieve a nuanced understanding of the visual characteristics associated with both healthy and infected leaves.
+
+2. **Data Understanding:**
+   - Collect and explore the dataset to gain insights into the visual features that distinguish healthy cherry leaves from those with powdery mildew.
+
+3. **Data Preparation:**
+   - Clean, transform, and prepare the data, focusing on visual attributes crucial for conducting the differentiation study.
+
+4. **Modeling:**
+   - Apply various techniques to the data and evaluate results for effectiveness in meeting project goals.
+
+5. **Evaluation:**
+   - Assess model results, concentrating on the model's ability to visually differentiate between healthy and powdery mildew-affected cherry leaves.
+
+6. **Deploymet:**
+   - Deploy the model and continuously monitor results to ensure ongoing alignment with project objectives.
+
+#### **Mapping Business Requirements to Data Visualizations and ML Tasks**
+
+**Business Requirements 1:**
+> The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+
+*User Story:*
+
+- As a user, I want an interactive, navigable dashboard for a clear understanding of visual features distinguishing healthy and infected cherry leaves.
+- As a user, I want to visualize average and variability images to facilitate the visual differentiation study.
+- As a user, I want to display the difference between average healthy and infected leaves for a nuanced visual understanding.
+- As a user, I want an image montage of healthy and infected leaves for a comprehensive visual comparison.
+
+ *Implementation:*
+
+- Developed a Streamlit-based dashboard with an easy navigation sidebar.
+- Calculated the difference between average infected and healthy leaves.
+- Presented "mean" and "standard deviation" images for healthy and infected leaves.
+- Created an image montage for both infected and healthy leaves.
+
+**Business Requirement 2:**
+
+>The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+*User Story:*
+
+- As a user, I want a ML model to predict with high accuracy whether a cherry leaf is healthy or contains powdery mildew.
+
+*Implementation:*
+
+- Deployed an ML model with optimal hyperparameters, achieving a prediction accuracy of 97%.
+- Enabled users to upload cherry leaf images for instant evaluation through an uploader widget.
+- Displayed uploaded images with prediction statements, indicating the presence of powdery mildew and associated probabilities.
 
 ---
