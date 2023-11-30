@@ -16,6 +16,8 @@
     - [**Hypothesis 3**](#hypothesis-3)
     - [**Rationale to Map business Requirements to Data Visualizations and ML Tasks**](#rationale-to-map-business-requirements-to-data-visualizations-and-ml-tasks)
       - [**Mapping Business Requirements to Data Visualizations and ML Tasks**](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
+  - [ML Business Case](#ml-business-case)
+  - [Dashboard Design (Streamlit App User Interface)](#dashboard-design-streamlit-app-user-interface)
 
 ---
 
@@ -75,6 +77,7 @@ cherry leaf images provided by Farmy & Foods, taken from their crops.
 healthy cherry leaf from one with powdery mildew.
 2. The client is interested in predicting if a cherry leaf is healthy or
 contains powdery mildew.
+3. The client wants to obtain a report from ML predictions on new leaves.
 
 ---
 
@@ -370,4 +373,114 @@ In alignment with the CRISP-DM methodology, our approach encompasses six key pha
 - Enabled users to upload cherry leaf images for instant evaluation through an uploader widget.
 - Displayed uploaded images with prediction statements, indicating the presence of powdery mildew and associated probabilities.
 
+**Business Requirement 3:**
+> The client wants to obtain a report from ML predictions on new leaves.
+
+*User Story:*
+
+- As a user, I want to obtain a report from ML predictions on new leaves.
+
+*Implementation:*
+
+- Generated a downloadable .csv report after each batch of uploaded images with predicted status.
+
 ---
+
+## ML Business Case
+
+In the context of our project, the Machine Learning (ML) business case revolves around developing a predictive model capable of discerning whether a cherry leaf is healthy or infected with powdery mildew. This problem falls under the category of supervised learning, specifically a two-class, single-label classification model.
+
+**Objectives:**
+
+1. **Prediction on Cherry Leaf Dataset:**
+   - The primary objective is to create an ML model that predicts, based on a given dataset of cherry leaves, whether they are healthy or infected.
+   - This is a supervised learning task with a binary outcome, making it a classification problem.
+
+2. **Outcome Improvement:**
+   - The model's purpose is to offer a more efficient and accurate means of detecting powdery mildew in cherry trees.
+   - The current heuristic involves labor-intensive manual inspection, which is time-consuming and prone to human error. The goal is to significantly enhance this process.
+  
+3. **Model Success Metrics:**
+   - Aim for a model accuracy of 97% or higher on the test set.
+   - The model output will be a binary flag indicating whether the leaf is healthy or infected.
+
+4. **User Interaction:**
+   - Users, in this case, the owners or caretakers of cherry tree plantations, will capture images of leaves and upload them to the application.
+   - The prediction will be provided swiftly, offering real-time insights into the health status of the leaves.
+
+**Heuristics:**
+
+- The existing method relies on manual inspections, consuming approximately 30 minutes for each tree. This process is laborious, prone to errors, and inefficient.
+- The training dataset, consisting of 4208 images of cherry leaves, is provided by Farmy & Foody and available on Kaggle.
+
+**Business Impact:**
+
+- The successful implementation of the ML model is anticipated to revolutionize the inspection process, saving time, reducing labor costs, and improving the overall accuracy of powdery mildew detection.
+
+---
+
+## Dashboard Design (Streamlit App User Interface)
+
+1. ### **Quick Project Summary**
+
+   - General Information
+     - Cherry powdery mildew is a surface fungus that manifests itself on both the developing leaves and fruit of cherry trees. Cherry powdery mildew appears as areas of white fungal growth, often in circular shapes. Presence of powdery mildew on cherries not only damages the fruit on which it grows, but can quickly lead to contamination of entire boxes of packaged cherries at harvest, where fruit infected with powdery mildew begin to rot and quickly spread to neighbouring fruit in the box or bin.
+
+   - Project Dataset
+     - The available dataset contains 4208 image, The images show 2104 healthy cherry leaves images and 2104 cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+   - Business Requirements
+     - The client is interested in conducting a study to visually differentiate a
+     healthy cherry leaf from one with powdery mildew.
+     - The client is interested in predicting if a cherry leaf is healthy or
+     contains powdery mildew.
+     - The client wants to obtain a report from ML predictions on new leaves.
+
+2. ### **Leaves View**
+
+   *It will answer business requirement 1*
+   - **Study Overview**
+      - In this research, our primary objective is to pinpoint visual indicators of powdery mildew infection on cherry leaves. Early signs often manifest as circular lesions with a subtle green tint, eventually giving rise to a delicate, cottony appearance manifests in the infected regions.Transforming these visual traits into the language of machine learning necessitates meticulous image preparation before initiating model training. This preparatory step is crucial for optimal feature extraction and effective training. When handling an image dataset, the imperative lies in the normalization of images before the Neural Network training process. Normalization entails determining the mean and standard deviation across the entire dataset, employing a mathematical algorithm tailored to the inherent qualities of each image. This normalization process significantly enhances the model's capacity to comprehend and generalize from the dataset, thereby elevating overall performance.
+
+   >- Difference between Average and Variability Image
+   >- Differences between average healthy and average infected leaves
+   >- Image Montage
+
+3. ### **Powdery Mildew Detector**
+
+   *It will answer business requirement 2 and 3*
+   - **Live Prediction**
+     - Users can upload images of cherry leaves for live predictions. The tool provides detailed analysis, prediction statements, and associated probabilities.
+
+   - **Sample Dataset**
+     - To perform a live prediction, you can upload images of cherry leaves. For your convenience, you can download a sample dataset containing images of both healthy and infected leaves from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
+
+   - **Analysis Report**
+     - After analysis, the tool generates a comprehensive report, including image names and prediction results, probability distribution and time elapsed.
+
+    Example 1 - Healthy Sample
+
+   1. ><details><summary>Image Sample</summary><img src="/readme_images/healthy_sample_img.png">
+    </details>
+
+    2. ><details><summary>Predict Analysis</summary><img src="/readme_images/healthy_leaves.png">
+    </details>
+
+    3. ><details><summary>Probability Distribution</summary><img src="/readme_images/healthy_leaves.png">
+    </details>
+
+    4. ><details><summary>Time elapsed</summary><img src="/readme_images/healthy_leaves.png">
+    </details>
+
+    Example 2 - Infected Sample
+
+   1. ><details><summary>Image Sample</summary><img src="/readme_images/healthy_sample_img.png">
+   </details>
+
+   2. ><details><summary>Predict Analysis</summary><img src="/readme_images/healthy_leaves.png">
+   </details>
+
+   3. ><details><summary>Probability Distribution</summary><img src="/readme_images/healthy_leaves.png">
+   </details>
+
+   4. ><details><summary>Time elapsed</summary><img src="/readme_images/healthy_leaves.png">
+   </details>
