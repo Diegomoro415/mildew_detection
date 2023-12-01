@@ -562,3 +562,9 @@ Pandas: Transforms numerical data into easy-to-use DataFrames, simplifying funct
 - The Powdery Mildew information was taken from [Decision Aid System](https://ca.decisionaid.systems/articles/cherry_powdery_mildew)
 - Template for this project belongs to [Code Institute](https://codeinstitute.net/)
 - Jupiter notebooks and pages for Dashboard are from Walkthrough project lessons [Code Institute Walkthrough](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+2021_Q4/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/)
+
+## Acknowledgements
+
+- Thank to my mentor, **Mo Shami**, for their invaluable supervision and constructive feedback.
+- Thank to the  Code Institute Slack Community for generously sharing knowledge and experiences.
+- Special thanks to my wonderful wife for all support throughout this journey.
