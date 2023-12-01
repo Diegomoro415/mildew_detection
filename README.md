@@ -506,20 +506,36 @@ In the context of our project, the Machine Learning (ML) business case revolves 
 
 ---
 
-## Technologies used
+## Used Tools
 
-- Codeanywhere
-- Jupyter Notebook
-- Python
-- Git
-- Github
-- Kaggle
-- Numpy
-- Pandas
-- Seaborn
-- Matplotlib
-- TensorFlow
-- Heroku
+### **Platforms and Development Environments**
+
+- **Codenyhere:** Used as an IDE workspace to develop the project code.
+- **GitHub:** Repository to store and share the project code.
+- **Heroku:** Hosting platform used to deploy the project. Deployment of the dashboard as a web application.
+- **Jupyter Notebook:** Tool used to edit and run the project code.
+- **Kaggle:** Source to download datasets relevant to this project.
+- **Streamlit:** Development of the dashboard for the presentation of data and project delivery.
+- **Git/GitHub:** Version control and storage of source code.
+
+### **Programming Laguages**
+
+- **Python:** The primary language used to develop the project code.
+- **Markdown:** Used for documentation and formatting the README.
+
+### **Main Data Analysis and Machine Learning Libraries**
+
+Here are the main libraries that were used in this project for data analysis and machine learning tasks:
+
+- **Numpy:** Processing image by converting them into NumPy arrays, serving as a funtamental tool for various tasks within the project.
+Pandas: Transforms numerical data into easy-to-use DataFrames, simplifying functional operations.
+- **Matplotlib:** Reads, processes, and displays image data, creating graphs for better tabular data visualization.
+- **Seaborn:** Enhances data visualization and presentation, including features like the confusion matrix heatmap and image dimensions scatter plot.
+- **Plotly:** Produces interactive charts on the dashboard for graphical data representation.
+- **TensorFlow:** Constructs the machine learning model, serving as a key library for model development.
+- **Keras:** Fine-tunes model hyperparameters to achieve the optimal combination for accuracy.
+- **Scikit-learn:** Calculates class weights to handle target imbalances and generates a comprehensive classification report.
+- **PIL Image:** Employed in data cleaning to obtain bounding boxes of foreground image elements and crop images accordingly.
 
 ---
 
@@ -532,8 +548,17 @@ In the context of our project, the Machine Learning (ML) business case revolves 
 - The project was deployed to **Heroku** using the following steps.
 
 1. Log in to **Heroku** and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+2. Log into Heroku CLI in IDE workspace terminal using the bash command: heroku login -i and enter user credentials
+3. Set the app's stack to heroku-20 using the bash command: heroku stack:set heroku-20 for compatibility with the Python 3.8.12 version used for this project
+4. Back to project page on **Heroku** at the Deploy tab, select GitHub as the deployment method.
+5. Select your repository name and click Search. Once it is found, click Connect.
+6. Select the branch you want to deploy, then click Deploy Branch.
+7. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+8. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+## Credits
+
+- The dataset of cherry leaves was sourced from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) and curated by [Code Institute](https://www.kaggle.com/codeinstitute)
+- The Powdery Mildew information was taken from [Decision Aid System](https://ca.decisionaid.systems/articles/cherry_powdery_mildew)
+- Template for this project belongs to [Code Institute](https://codeinstitute.net/)
+- Jupiter notebooks and pages for Dashboard are from Walkthrough project lessons [Code Institute Walkthrough](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+2021_Q4/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/)
