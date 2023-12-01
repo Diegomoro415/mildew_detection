@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [🌱 Cherry Leaf Mildew Detection](#-cherry-leaf-mildew-detection)
+- [Cherry Leaf Mildew Detection](#-cherry-leaf-mildew-detection)
   - [Table of Contents](#table-of-contents)
     - [Project Dashboard](#project-dashboard)
   - [Brief Introduction](#brief-introduction)
@@ -319,6 +319,10 @@ scalable across thousands of cherry trees.
 
 ### **Rationale to Map business Requirements to Data Visualizations and ML Tasks**
 
+The client's interest in conducting a study to visually differentiate healthy cherry leaves from those affected by powdery mildew steam from a critical need within the cherry plantation industry. The ability to rapidy identify leaves with powdery mildew is essential to ensure the supply of high-quality cherries to the market.
+
+The process of manually inspecting each cherry tree, collecting leaf samples, and visually detecting powdery mildew is time-consuming and not scalable due to the large number of cherry tree across multiple farms. To address this challenge, the IT team proposed the implementation of a machine learning (ML) system, which aligns with the client's second requirement, oo predict the health of cherry leaves.
+
 In alignment with the CRISP-DM methodology, our approach encompasses six key phases to ensure a systematic and effective development process:
 
 1. **Business Understanding:**
@@ -440,7 +444,7 @@ In the context of our project, the Machine Learning (ML) business case revolves 
    *It will answer business requirement 1*
    - **Study Overview**
       - In this research, our primary objective is to pinpoint visual indicators of powdery mildew infection on cherry leaves. Early signs often manifest as circular lesions with a subtle green tint, eventually giving rise to a delicate, cottony appearance manifests in the infected regions.Transforming these visual traits into the language of machine learning necessitates meticulous image preparation before initiating model training. This preparatory step is crucial for optimal feature extraction and effective training. When handling an image dataset, the imperative lies in the normalization of images before the Neural Network training process. Normalization entails determining the mean and standard deviation across the entire dataset, employing a mathematical algorithm tailored to the inherent qualities of each image. This normalization process significantly enhances the model's capacity to comprehend and generalize from the dataset, thereby elevating overall performance.
-
+  
    >- Difference between Average and Variability Image
    >- Differences between average healthy and average infected leaves
    >- Image Montage
@@ -459,28 +463,77 @@ In the context of our project, the Machine Learning (ML) business case revolves 
 
     Example 1 - Healthy Sample
 
-   1. ><details><summary>Image Sample</summary><img src="/readme_images/healthy_sample_img.png">
+    - > <details><summary>Image Sample</summary><img src="/readme_images/healthy_sample_img.png">
     </details>
 
-    2. ><details><summary>Predict Analysis</summary><img src="/readme_images/healthy_leaves.png">
+    - > <details><summary>Predict Analysis</summary><img src="/readme_images/healthy_predict.png">
     </details>
 
-    3. ><details><summary>Probability Distribution</summary><img src="/readme_images/healthy_leaves.png">
+    - > <details><summary>Probability Distribution</summary><img src="/readme_images/healthy_probability.png">
     </details>
 
-    4. ><details><summary>Time elapsed</summary><img src="/readme_images/healthy_leaves.png">
+    - > <details><summary>Time elapsed</summary><img src="/readme_images/healthy_time.png">
     </details>
 
     Example 2 - Infected Sample
 
-   1. ><details><summary>Image Sample</summary><img src="/readme_images/healthy_sample_img.png">
+   - ><details><summary>Image Sample</summary><img src="/readme_images/infected_sample_img.png">
    </details>
 
-   2. ><details><summary>Predict Analysis</summary><img src="/readme_images/healthy_leaves.png">
+   - ><details><summary>Predict Analysis</summary><img src="/readme_images/infected_predict.png">
    </details>
 
-   3. ><details><summary>Probability Distribution</summary><img src="/readme_images/healthy_leaves.png">
+   - ><details><summary>Probability Distribution</summary><img src="/readme_images/infected_probability.png">
    </details>
 
-   4. ><details><summary>Time elapsed</summary><img src="/readme_images/healthy_leaves.png">
+   - ><details><summary>Time elapsed</summary><img src="/readme_images/infected_time.png">
    </details>
+
+4. ### **Powdery Mildew Detector**
+
+    - Block for each project hypothesis, describe the conclusion and how
+     it is validated.
+
+5. ### **ML Performance Metrics**
+
+    - Images Distribution per Sets and Label
+    - Model Performance
+        - Classification Report
+        - ROC Curve
+        - Confusion Matrix
+        - Model Performance - Loss and Accuracy
+    - Generalized Performance on Test Set
+
+---
+
+## Technologies used
+
+- Codeanywhere
+- Jupyter Notebook
+- Python
+- Git
+- Github
+- Kaggle
+- Numpy
+- Pandas
+- Seaborn
+- Matplotlib
+- TensorFlow
+- Heroku
+
+---
+
+## Deployment
+
+### **Heroku**
+
+- The App live link is: <https://mildew-detector-77f8e7e2c6fd.herokuapp.com/>
+- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+- The project was deployed to **Heroku** using the following steps.
+
+1. Log in to **Heroku** and create an App
+2. At the Deploy tab, select GitHub as the deployment method.
+3. Select your repository name and click Search. Once it is found, click Connect.
+4. Select the branch you want to deploy, then click Deploy Branch.
+5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+6. If the slug size is too large then add large files not required for the app to the .slugignore file.
