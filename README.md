@@ -18,6 +18,10 @@
       - [**Mapping Business Requirements to Data Visualizations and ML Tasks**](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
   - [ML Business Case](#ml-business-case)
   - [Dashboard Design (Streamlit App User Interface)](#dashboard-design-streamlit-app-user-interface)
+  - [Used Tools](#used-tools)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+  - [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -122,7 +126,7 @@ Hypothesis and Validation 3
 ---
 
 ### **Hypothesis 1**
->
+
 > **Visual Differentiation:** We hypothesize that cherry leaves infected with
 powdery mildew exhibit distinctive visual patterns or marks that differentiate
 them from healthy leaves. This can include specific discolorations, lesions,
@@ -548,13 +552,34 @@ Pandas: Transforms numerical data into easy-to-use DataFrames, simplifying funct
 - The project was deployed to **Heroku** using the following steps.
 
 1. Log in to **Heroku** and create an App
-2. Log into Heroku CLI in IDE workspace terminal using the bash command: heroku login -i and enter user credentials
-3. Set the app's stack to heroku-20 using the bash command: heroku stack:set heroku-20 for compatibility with the Python 3.8.12 version used for this project
-4. Back to project page on **Heroku** at the Deploy tab, select GitHub as the deployment method.
-5. Select your repository name and click Search. Once it is found, click Connect.
-6. Select the branch you want to deploy, then click Deploy Branch.
-7. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-8. If the slug size is too large then add large files not required for the app to the .slugignore file.
+   - <details><summary>Create a New App</summary><img src="/readme_images/heroku_new_app.png">
+     </details>
+2. Give the app a name and select region
+   - <details><summary>Connect Repository</summary><img src="/readme_images/heroku_create_app.png">
+     </details>
+3. Log into Heroku CLI in IDE workspace terminal using the bash command: heroku login -i and enter user credentials
+   - <details><summary>Login Heroku on IDE</summary><img src="/readme_images/heroku_ide_login.png">
+     </details>
+4. Set the app's stack to heroku-20 using the bash command: heroku stack:set heroku-20 for compatibility with the Python 3.8.12 version used for this project
+   - <details><summary>Set Heroku Stack</summary><img src="/readme_images/heroku_stack.png">
+     </details>
+5. Back to project page on **Heroku** at the Deploy tab, select GitHub as the deployment method.
+   - <details><summary>Deployment Method</summary><img src="/readme_images/heroku_deployment_method.png">
+     </details>
+6. Select your repository name and click Search. Once it is found, click Connect.
+   - <details><summary>Connect Repository</summary><img src="/readme_images/heroku_connect_github.png">
+     </details>
+7. Select the branch you want to deploy, then click Deploy Branch.
+   - <details><summary>Select Branch</summary><img src="/readme_images/heroku_branch.png">
+     </details>
+8. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+   - <details><summary>Deployment</summary><img src="/readme_images/heroku_done.png">
+     </details>
+9. If the slug size is too large then add large files not required for the app to the .slugignore file.
+   - <details><summary>Connect Repository</summary><img src="/readme_images/heroku_slugignore.png">
+     </details>
+
+---
 
 ## Credits
 
@@ -562,6 +587,8 @@ Pandas: Transforms numerical data into easy-to-use DataFrames, simplifying funct
 - The Powdery Mildew information was taken from [Decision Aid System](https://ca.decisionaid.systems/articles/cherry_powdery_mildew)
 - Template for this project belongs to [Code Institute](https://codeinstitute.net/)
 - Jupiter notebooks and pages for Dashboard are from Walkthrough project lessons [Code Institute Walkthrough](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+2021_Q4/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/)
+
+---
 
 ## Acknowledgements
 
