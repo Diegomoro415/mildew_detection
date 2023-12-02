@@ -14,8 +14,8 @@
     - [**Hypothesis 1**](#hypothesis-1)
     - [**Hypothesis 2**](#hypothesis-2)
     - [**Hypothesis 3**](#hypothesis-3)
-    - [**Rationale to Map business Requirements to Data Visualizations and ML Tasks**](#rationale-to-map-business-requirements-to-data-visualizations-and-ml-tasks)
-      - [**Mapping Business Requirements to Data Visualizations and ML Tasks**](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
+  - [**Rationale to Map business Requirements to Data Visualizations and ML Tasks**](#rationale-to-map-business-requirements-to-data-visualizations-and-ml-tasks)
+    - [**Mapping Business Requirements to Data Visualizations and ML Tasks**](#mapping-business-requirements-to-data-visualizations-and-ml-tasks)
   - [ML Business Case](#ml-business-case)
   - [Dashboard Design (Streamlit App User Interface)](#dashboard-design-streamlit-app-user-interface)
   - [Used Tools](#used-tools)
@@ -321,14 +321,11 @@ scalable across thousands of cherry trees.
 
 ---
 
-### **Rationale to Map business Requirements to Data Visualizations and ML Tasks**
+## **CRISP-DM Method**
 
-The client's interest in conducting a study to visually differentiate healthy cherry leaves from those affected by powdery mildew steam from a critical need within the cherry plantation industry. The ability to rapidy identify leaves with powdery mildew is essential to ensure the supply of high-quality cherries to the market.
-
-The process of manually inspecting each cherry tree, collecting leaf samples, and visually detecting powdery mildew is time-consuming and not scalable due to the large number of cherry tree across multiple farms. To address this challenge, the IT team proposed the implementation of a machine learning (ML) system, which aligns with the client's second requirement, oo predict the health of cherry leaves.
-
+![CRISP-DM](/readme_images/crisp_method.png)
 In alignment with the CRISP-DM methodology, our approach encompasses six key phases to ensure a systematic and effective development process:
-
+  
 1. **Business Understanding:**
    - Define objectives and requirements to conduct a visual differentiation study between healthy and powdery mildew-affected cherry leaves.
    - Set clear goals to achieve a nuanced understanding of the visual characteristics associated with both healthy and infected leaves.
@@ -347,6 +344,15 @@ In alignment with the CRISP-DM methodology, our approach encompasses six key pha
 
 6. **Deploymet:**
    - Deploy the model and continuously monitor results to ensure ongoing alignment with project objectives.
+
+Source:
+[CRISP-DM Cross-Industry Standard Process for Data Mining](https://medium.com/@yennhi95zz/0-an-overview-of-crisp-dm-the-cross-industry-standard-process-for-data-mining-1078ba8cd6da)
+
+## **Rationale to Map business Requirements to Data Visualizations and ML Tasks**
+
+The client's interest in conducting a study to visually differentiate healthy cherry leaves from those affected by powdery mildew steam from a critical need within the cherry plantation industry. The ability to rapidy identify leaves with powdery mildew is essential to ensure the supply of high-quality cherries to the market.
+
+The process of manually inspecting each cherry tree, collecting leaf samples, and visually detecting powdery mildew is time-consuming and not scalable due to the large number of cherry tree across multiple farms. To address this challenge, the IT team proposed the implementation of a machine learning (ML) system, which aligns with the client's second requirement, oo predict the health of cherry leaves.
 
 #### **Mapping Business Requirements to Data Visualizations and ML Tasks**
 
@@ -380,6 +386,33 @@ In alignment with the CRISP-DM methodology, our approach encompasses six key pha
 - Deployed an ML model with optimal hyperparameters, achieving a prediction accuracy of 97%.
 - Enabled users to upload cherry leaf images for instant evaluation through an uploader widget.
 - Displayed uploaded images with prediction statements, indicating the presence of powdery mildew and associated probabilities.
+
+### **Model Architecture and Hyperparameters**
+
+To fulfill the requirement of predicting leaf health with 97% accuracy, the model was meticulously designed and fine-tuned. The chosen architecture and hyperparameters were driven by the following considerations:
+
+- #### **Model Architecture**
+
+  - Input Layer: 1
+  - Hidden Layers: 3 (2 ConvLayer, 1 FullyConnected)
+  - Output Layer: 1
+
+- #### **Hyperparameter Choices**
+
+  1. **Layers:** The model comprises carefully structured layers to capture complex patterns in leaf images.
+  2. **Number of Neurons:** Determined through trial and error to achieve the desired predictive performance.
+  3. **Kernel Size:** Optimized for efficient feature extraction in ConvLayers.
+  4. **Activation Function:** Utilized non-sigmoid activation functions for enhanced model expressiveness.
+  5. **Output:** Configured to provide a binary classification result (healthy or infected).
+  6. **Dropout:** Incorporated to prevent overfitting and enhance generalization.
+
+- ### **Model Performance and Efficiency**
+
+    The model not only meets the accuracy target but also aligns with additional business goals:
+
+  - **Prediction on New Dataset:** The model demonstrates robustness in predicting leaf health on new datasets.
+  - **Resource Efficiency:** Engineered to save company time, resources, and money by automating a previously manual process.
+  - **Computational Efficiency:** Designed to utilize minimal computational power while delivering accurate predictions.
 
 **Business Requirement 3:**
 > The client wants to obtain a report from ML predictions on new leaves.
