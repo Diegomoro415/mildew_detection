@@ -85,6 +85,10 @@ contains powdery mildew.
 
 ---
 
+##### Back to [top](#table-of-contents)
+
+---
+
 ## Hypothesis and Validations
 
 Hypothesis and Validation 1
@@ -249,10 +253,10 @@ positives/negatives and false positives/negatives.
 
 - ### **Model Performance Plots**
 
-><details><summary>Model Training Loss</summary><img src="/outputs/v1/model_training_loss.png">
+><details><summary>Model Training Accurancy</summary><img src="/outputs/v1/model_training_acc.png">
 </details>
 
-><details><summary>Model Training Accurancy</summary><img src="/outputs/v1/model_training_losses.png">
+><details><summary>Model Training Loss</summary><img src="/outputs/v1/model_training_losses.png">
 </details>
 
 The overall performance of the model on the test set is presented below:
@@ -321,9 +325,14 @@ scalable across thousands of cherry trees.
 
 ---
 
+##### Back to [top](#table-of-contents)
+
+---
+
 ## **CRISP-DM Method**
 
 ![CRISP-DM](/readme_images/crisp_method.png)
+
 In alignment with the CRISP-DM methodology, our approach encompasses six key phases to ensure a systematic and effective development process:
   
 1. **Business Understanding:**
@@ -347,6 +356,16 @@ In alignment with the CRISP-DM methodology, our approach encompasses six key pha
 
 Source:
 [CRISP-DM Cross-Industry Standard Process for Data Mining](https://medium.com/@yennhi95zz/0-an-overview-of-crisp-dm-the-cross-industry-standard-process-for-data-mining-1078ba8cd6da)
+
+The entire process has been documented utilizing the Kanban Board available in the project section of this GitHub repository
+
+A Kanban board serves as an agile project management tool, strategically crafted to visually represent tasks, control work-in-progress, and optimize workflow efficiency. With the utilization of cards, columns, and a commitment to continuous improvement, Kanban boards empower technology and service teams to manage work effectively and achieve their goals.
+
+><details><summary>Tasks</summary><img src="/readme_images/github_issues.png"></details>
+><details><summary>Epics</summary><img src="/readme_images/github_milestone.png"></details>
+><details><summary>Kanban</summary><img src="/readme_images/github_kanban.png"></details>
+
+The CRISP-DM process are broken down into individual tasks, creating a granular breakdown of the project. Each task is seamlessly integrated into a workflow that progresses through stages such as To-Do, In Progress, and Done. This meticulous workflow is accompanied by comprehensive details for each task, ensuring a thorough understanding and effective management as the project advances through its various phases.
 
 ## **Rationale to Map business Requirements to Data Visualizations and ML Tasks**
 
@@ -424,6 +443,10 @@ To fulfill the requirement of predicting leaf health with 97% accuracy, the mode
 *Implementation:*
 
 - Generated a downloadable .csv report after each batch of uploaded images with predicted status.
+
+---
+
+##### Back to [top](#table-of-contents)
 
 ---
 
@@ -540,6 +563,10 @@ In the context of our project, the Machine Learning (ML) business case revolves 
         - Confusion Matrix
         - Model Performance - Loss and Accuracy
     - Generalized Performance on Test Set
+
+---
+
+##### Back to [top](#table-of-contents)
 
 ---
 
