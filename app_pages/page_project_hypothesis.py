@@ -1,8 +1,14 @@
+# Importing necessary libraries
 import streamlit as st
 import matplotlib.pyplot as plt
 
 
 def page_project_hypothesis_body():
+    """
+    This function creates sections with hypotheses and validations related to
+    the project. It covers visual differentiation, model prediction, and time
+    efficiency hypotheses, along with their respective validations.
+    """
     st.write("## Project Hypothesis and Validation")
     st.write("---")
 

@@ -9,7 +9,11 @@ from src.data_management import load_pkl_file
 
 def plot_predictions_probabilities(pred_proba, pred_class):
     """
-    Plot prediction probability results
+    Plot prediction probability results.
+
+    Parameters:
+        pred_proba (float): The predicted probability.
+        pred_class (str): The predicted class.
     """
 
     prob_per_class = pd.DataFrame(
@@ -43,27 +47,49 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
 def resize_input_image(img, version):
     """
-    Reshape image to average image size
+    Reshape image to average image size.
+
+    Parameters:
+        img (PIL.Image.Image): The input image.
+        version (str): The version identifier.
+
+    Returns:
+        np.ndarray: The resized image as a NumPy array.
     """
+    # Load the image shape from a saved pickle file
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
-    img_resized = img.resize(
-        (image_shape[1], image_shape[0]), Image.LANCZOS)
-    my_image = np.expand_dims(img_resized, axis=0)/255
+
+    # Resize the image using Lanczos interpolation
+    img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
+
+    # Expand dimensions and normalize the image
+    my_image = np.expand_dims(img_resized, axis=0) / 255
 
     return my_image
 
 
 def load_model_and_predict(my_image, version):
     """
-    Load and perform ML prediction over live images
-    """
+    Load and perform ML prediction over live images.
 
+    Parameters:
+        my_image (np.ndarray): The input image as a NumPy array.
+        version (str): The version identifier.
+
+    Returns:
+        tuple: A tuple containing the predicted probability and class.
+    """
+    # Load the pre-trained model
     model = load_model(f"outputs/{version}/mildew_detection_model.keras")
 
+    # Make a prediction on the input image
     pred_proba = model.predict(my_image)[0, 0]
 
+    # Map numerical class to actual class names
     target_map = {v: k for k, v in {'Healthy': 0, 'Infected': 1}.items()}
     pred_class = target_map[pred_proba > 0.5]
+
+    # Adjust probability and display the predicted class
     if pred_class == target_map[0]:
         pred_proba = 1 - pred_proba
 

@@ -10,6 +10,12 @@ import random
 
 
 def page_leaves_view_body():
+    """
+    Generates the content for the 'Leaves View' page.
+
+    Displays information about the research on visually
+    differentiating cherry leaves affected by powdery mildew from healthy ones.
+    """
     st.write("## Leaves View")
     st.write("---")
 
@@ -100,6 +106,16 @@ def page_leaves_view_body():
 
 # Function to create the image montage
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
+    """
+    Creates an image montage from a specified directory.
+
+    Args:
+        dir_path (str): Path to the directory containing images.
+        label_to_display (str): The label/class of images to display.
+        nrows (int): Number of rows in the montage.
+        ncols (int): Number of columns in the montage.
+        figsize (tuple): Size of the resulting matplotlib figure.
+    """
     sns.set_style("white")
     labels = os.listdir(dir_path)
 

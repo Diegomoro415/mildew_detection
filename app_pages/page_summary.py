@@ -1,8 +1,15 @@
+# Importing necessary libraries
 import streamlit as st
 
 
 def page_summary_body():
+    """
+    Generates the content for the 'Project Summary' page.
 
+    This function provides a summary of the project, including general
+    information about cherry powdery mildew, the data source, and the business
+    requirements specified by the client.
+    """
     st.write("## Project Summary")
     st.write("---")
 

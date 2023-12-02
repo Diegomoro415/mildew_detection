@@ -1,3 +1,4 @@
+# Importing necessary libraries
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -6,6 +7,14 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_ml_performance_dashboard():
+    """
+    Generates the content for the 'ML Performance Metrics' dashboard page.
+
+    This function creates a user-friendly presentation of how the dataset
+    was divided and how the model performed on that data. It includes sections
+    on Images Distribution, Model Performance, and Generalized Performance
+    on the Test Set.
+    """
     version = 'v1'
     st.write("## ML Performance Metrics")
     st.write("---")
@@ -23,7 +32,7 @@ def page_ml_performance_dashboard():
         f"- **Validation set (10%):** Used to fine-tune the model.\n"
         f"- **Test set (20%):** Unseen data for final model evaluation."
     )
-
+    # Display images showing the distribution of labels and sets
     labels_distribution_img = plt.imread(
         f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution_img,
